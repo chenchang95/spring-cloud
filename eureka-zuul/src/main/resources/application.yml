@@ -1,0 +1,14 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8085/eureka/
+server:
+  port: 8089
+spring:
+  application:
+    name: api-getway
+zuul:
+  routes:
+    service-one:
+      path: /one/**
+      serviceId: service-one
